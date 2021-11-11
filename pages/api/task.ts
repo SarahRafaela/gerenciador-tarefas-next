@@ -148,6 +148,7 @@ const getTasks = async (req: NextApiRequest, res: NextApiResponse<DefaultRespons
         }
     }
 
+    console.log('query', query);
     const result = await TaskModel.find(query) as Task[];
     return res.status(200).json(result);
 }
